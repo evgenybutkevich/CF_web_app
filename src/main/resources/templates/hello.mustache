@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello</title>
+    </head>
+
+    <body>
+        <h1>Welcome to hello page!</h1>
+
+        <form method="post" action="/logout">
+            <input name="_csrf" value="{{_csrf.token}}" type="hidden"/>
+            <input type="submit" value="Sign Out"/>
+        </form>
+    </body>
+</html>

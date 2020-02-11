@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Comment</title>
+    </head>
+
+    <body>
+        <h1>Welcome to comment page!</h1>
+
+        <div>
+            <form method="post">
+                <input name="_csrf" value="{{_csrf.token}}" type="hidden"/>
+                <input name="text" type="text" placeholder="enter the comment...">
+                <button type="submit">Send</button>
+            </form>
+        </div>
+
+        <hr>
+
+        <div>Comments list</div>
+        {{#comments}}
+        <div>
+            <b>{{id}}</b>
+            <span>{{text}}</span>
+        </div>
+        {{/comments}}
+
+    </body>
+
+</html>
