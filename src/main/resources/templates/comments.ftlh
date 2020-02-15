@@ -2,7 +2,7 @@
 <#import "parts/navbar.ftlh" as n>
 <#import "parts/login.ftlh" as l>
 
-<@m.main "Main">
+<@m.main "Comments">
 <@n.navbar/>
 
 <div class="container mt-5">

@@ -16,10 +16,12 @@
 </#macro>
 
 <#macro logout>
+
 <form method="post" action="/logout">
     <input name="_csrf" value="${_csrf.token}" type="hidden"/>
     <div>
         <button type="submit">Logout</button>
     </div>
 </form>
+
 </#macro>

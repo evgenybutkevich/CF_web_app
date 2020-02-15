@@ -11,16 +11,18 @@
                 <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="/hello">Hello</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="/comments">Comments</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/login">Login</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Users</a>
+                <a class="nav-link" href="/users">Users</a>
             </li>
         </ul>
-
     </div>
 </nav>
 

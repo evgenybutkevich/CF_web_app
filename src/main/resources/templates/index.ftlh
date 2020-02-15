@@ -1,7 +1,7 @@
 <#import "parts/main.ftlh" as m>
 <#import "parts/navbar.ftlh" as n>
 
-<@m.main "Main">
+<@m.main "Index">
 <@n.navbar/>
 
 <div class="container mt-5">

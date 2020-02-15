@@ -13,7 +13,7 @@ public class User implements UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Integer id;
 
     private String username;
     private String password;
@@ -25,10 +25,10 @@ public class User implements UserDetails {
     private Set<Role> roles;
 
 //--id
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
