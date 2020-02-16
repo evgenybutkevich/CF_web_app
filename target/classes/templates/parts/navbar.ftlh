@@ -1,5 +1,8 @@
 <#macro navbar>
 
+<#import "login.ftlh" as l>
+<#include "security.ftlh">
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -19,10 +22,15 @@
             <li class="nav-item">
                 <a class="nav-link" href="/login">Login</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/users">Users</a>
-            </li>
+            <#if isAdmin>
+                <li class="nav-item">
+                    <a class="nav-link" href="/users">Users</a>
+                </li>
+            </#if>
         </ul>
+
+        <div class="navbar-text mr-3">Username: ${name}</div>
+        <@l.logout/>
     </div>
 </nav>
 

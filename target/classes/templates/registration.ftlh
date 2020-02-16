@@ -6,9 +6,9 @@
 <div class="container mt-5">
     <h1>Welcome to registration page!</h1>
 
-    ${m.message}
+    ${message?ifExists}
 
-    <@l.login "/registration"/>
+    <@l.login "/registration" "Sign up"/>
 </div>
 
 </@m.main>

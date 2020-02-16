@@ -2,21 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d588e86-06d9-47fe-a64f-02376b23c5da" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/controllers/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/userEdit.ftlh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/users.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/security.ftlh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/test/configurations/WebSecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/test/configurations/WebSecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/test/controllers/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/test/controllers/CommentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/test/controllers/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/test/controllers/RegistrationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/test/entities/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/test/entities/Role.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/test/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/test/entities/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/comments.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/comments.ftlh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/hello.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/hello.ftlh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.ftlh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.ftlh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/login.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/login.ftlh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/navbar.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/navbar.ftlh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/controllers/CommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/controllers/CommentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/controllers/RegistrationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/controllers/RegistrationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/entities/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/entities/Role.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.ftlh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/userEdit.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/userEdit.ftlh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/users.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/users.ftlh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/comments.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/comments.ftlh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/index.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.ftlh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/parts/login.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/parts/login.ftlh" afterDir="false" />
@@ -107,22 +104,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581493199390" />
-    <state width="1876" height="296" key="GridCell.Tab.0.bottom" timestamp="1581788440613">
+    <state width="1876" height="296" key="GridCell.Tab.0.bottom" timestamp="1581852860687">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="296" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581788440613" />
-    <state width="1876" height="296" key="GridCell.Tab.0.center" timestamp="1581788440613">
+    <state width="1876" height="296" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581852860687" />
+    <state width="1876" height="296" key="GridCell.Tab.0.center" timestamp="1581852860687">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="296" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581788440613" />
-    <state width="1876" height="296" key="GridCell.Tab.0.left" timestamp="1581788440613">
+    <state width="1876" height="296" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581852860687" />
+    <state width="1876" height="296" key="GridCell.Tab.0.left" timestamp="1581852860687">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="296" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581788440613" />
-    <state width="1876" height="296" key="GridCell.Tab.0.right" timestamp="1581788440613">
+    <state width="1876" height="296" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581852860687" />
+    <state width="1876" height="296" key="GridCell.Tab.0.right" timestamp="1581852860687">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="296" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581788440613" />
+    <state width="1876" height="296" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581852860687" />
     <state width="1876" height="342" key="GridCell.Tab.1.bottom" timestamp="1581495980959">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -143,10 +140,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="151" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1581778503236" />
-    <state x="655" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1581783160681">
+    <state x="655" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1581837741144">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="655" y="342" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581783160681" />
+    <state x="655" y="342" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581837741144" />
     <state x="525" y="255" width="869" height="606" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1581490265415">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

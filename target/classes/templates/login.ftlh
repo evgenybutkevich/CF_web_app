@@ -6,7 +6,7 @@
 <div class="container mt-5">
     <h1>Welcome to login page!</h1>
 
-    <@l.login "/login"/>
+    <@l.login "/login" "Login"/>
 
     <p>Click <a href="/registration">here</a> to sign up!</p>
 </div>

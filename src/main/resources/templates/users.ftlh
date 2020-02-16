@@ -1,13 +1,10 @@
 <#import "parts/main.ftlh" as m>
 <#import "parts/navbar.ftlh" as n>
-<#import "parts/login.ftlh" as l>
 
 <@m.main "Users">
 <@n.navbar/>
 
 <div class="container mt-5">
-    <@l.logout/>
-
     <h1>Welcome to users page!</h1>
 
     <div>Users list</div>
