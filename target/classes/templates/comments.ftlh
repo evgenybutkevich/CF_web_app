@@ -1,42 +1,51 @@
 <#import "parts/main.ftlh" as m>
 <#import "parts/navbar.ftlh" as n>
+<#include "parts/security.ftlh">
 
 <@m.main "Comments">
 <@n.navbar/>
 
-<div class="container mt-5">
-    <h1>Welcome to comment page!</h1>
+<div class="container col-6 mt-5">
+    <h4>List of comments</h4>
 
-    <a class="btn btn-primary" data-toggle="collapse" href="#addComment" role="button" aria-expanded="false">
-        Add comment
-    </a>
+    <hr>
 
-    <div class="collapse mt-3" id="addComment">
-        <form method="post">
-            <input name="_csrf" value="${_csrf.token}" type="hidden"/>
+    <#list comments as comments>
+        <div class="media border border-primary bg-primary m-1">
+            <img class="m-2" src="https://img.icons8.com/pastel-glyph/2x/user-male.png" width="64px" height="64px">
 
-            <div class="form-group row">
-                <div class="col-sm-6">
-                    <input name="text" class="form-control" type="text" placeholder="enter the comment...">
+            <div class="media-body bg-white">
+                <p class="m-1"><b>${comments.authorName}</b></p>
+                <p class="ml-3 m-1"><mark class="bg-warning">- ${comments.text}</mark></p>
+                <p class="m-1"><b>${comments.date}</b></p>
+            </div>
+        </div>
+    <#else>
+        <p class="m-1"><b>No comments yet...</b></p>
+    </#list>
+
+    <hr>
+
+    <#if isAdmin>
+        <a class="btn btn-primary" data-toggle="collapse" href="#addComment" role="button" aria-expanded="false">
+            Add comment
+        </a>
+
+        <div class="collapse mt-3" id="addComment">
+            <form method="post">
+                <input name="_csrf" value="${_csrf.token}" type="hidden"/>
+
+                <div class="form-group row">
+                    <div class="col-sm-6">
+                        <input name="text" class="form-control" type="text" placeholder="enter the comment...">
+                    </div>
+
+                    <button class="btn btn-primary" type="submit">Send</button>
                 </div>
 
-                <button class="btn btn-primary" type="submit">Send</button>
-            </div>
-
-
-        </form>
-    </div>
-
-    <div>Comments list</div>
-        <#list comments as comments>
-            <div>
-                <b>${comments.id}</b>
-                <span>${comments.text}</span>
-                <b>${comments.authorName}</b>
-            </div>
-        <#else>
-            No comments
-        </#list>
+            </form>
+        </div>
+    </#if>
 </div>
 
 </@m.main>
