@@ -14,6 +14,9 @@ public class MvcConfiguration implements WebMvcConfigurer {
     @Value("${upload.path}")
     private String uploadPath;
 
+    @Value("${icons.path}")
+    private String iconsPath;
+
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/").setViewName("index");
         registry.addViewController("/login").setViewName("login");
@@ -22,9 +25,13 @@ public class MvcConfiguration implements WebMvcConfigurer {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        String currentPath = String.format("%s%s%s", System.getProperty("user.dir"), File.separatorChar, uploadPath + "/");
+        String currentUploadPath = String.format("%s%s%s", System.getProperty("user.dir"), File.separatorChar, uploadPath + "/");
         registry.addResourceHandler("/img/**")
-            .addResourceLocations("file:///" + currentPath + "/");
+            .addResourceLocations("file:///" + currentUploadPath + "/");
+
+        String currentIconsPath = String.format("%s%s%s", System.getProperty("user.dir"), File.separatorChar, iconsPath + "/");
+        registry.addResourceHandler("/icons/**")
+                .addResourceLocations("file:///" + currentIconsPath + "/");
     }
 
 

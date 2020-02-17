@@ -3,12 +3,10 @@
 
 <@m.main "Registration">
 
-<div class="container mt-5">
-    <h1>Welcome to registration page!</h1>
+<h1>Welcome to registration page!</h1>
 
-    ${message?ifExists}
+${message?ifExists}
 
-    <@l.login "/registration" "Sign up"/>
-</div>
+<@l.login "/registration" "Sign up"/>
 
 </@m.main>

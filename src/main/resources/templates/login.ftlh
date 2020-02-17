@@ -3,12 +3,10 @@
 
 <@m.main "Login">
 
-<div class="container mt-5">
-    <h1>Welcome to login page!</h1>
+<h1>Welcome to login page!</h1>
 
-    <@l.login "/login" "Login"/>
+<@l.login "/login" "Login"/>
 
-    <p>Click <a href="/registration">here</a> to sign up!</p>
-</div>
+<p>Click <a href="/registration">here</a> to sign up!</p>
 
 </@m.main>
