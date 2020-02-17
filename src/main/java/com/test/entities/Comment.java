@@ -13,12 +13,13 @@ public class Comment {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-    private String date;
-    private String text;
-
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id")
     private User author;
+
+    private String text;
+    private String filename;
+    private String date;
 
     public Comment() {
     }
@@ -49,28 +50,36 @@ public class Comment {
         return id;
     }
 
-//--date
-    public void setDate(String date) {
-        this.date = date;
-    }
-    public String getDate() {
-        return date;
-    }
-
-//--text
-    public void setText(String text) {
-    this.text = text;
-}
-    public String getText() {
-        return text;
-    }
-
 //--author
     public void setAuthor(User author) {
         this.author = author;
     }
     public User getAuthor() {
         return author;
+    }
+
+//--text
+    public void setText(String text) {
+        this.text = text;
+    }
+    public String getText() {
+        return text;
+    }
+
+//--filename
+    public void setFilename(String filename) {
+        this.filename = filename;
+    }
+    public String getFilename() {
+        return filename;
+    }
+
+//--date
+    public void setDate(String date) {
+        this.date = date;
+    }
+    public String getDate() {
+        return date;
     }
 
 }
