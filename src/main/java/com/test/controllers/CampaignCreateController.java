@@ -1,7 +1,7 @@
 package com.test.controllers;
 
-import com.test.entities.Campaing;
-import com.test.repositories.CampaingRepository;
+import com.test.entities.Campaign;
+import com.test.repositories.CampaignRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,25 +11,25 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequestMapping("/create")
-public class CampaingCreateController {
+public class CampaignCreateController {
 
     @Autowired
-    private CampaingRepository campaingRepository;
+    private CampaignRepository campaignRepository;
 
     @GetMapping
-    public String createCampaing() {
-        return "createCampaing";
+    public String createCampaign() {
+        return "createCampaign";
     }
 
     @PostMapping
-    public String addCampaing(@RequestParam String name, @RequestParam String topic, @RequestParam String description,
+    public String addCampaign(@RequestParam String name, @RequestParam String topic, @RequestParam String description,
                               @RequestParam Double amountTotal, @RequestParam String logo) {
         if (logo == "") {
             logo = "no_image.png";
         }
 
-        Campaing campaing = new Campaing(name, topic, description, amountTotal, logo);
-        campaingRepository.save(campaing);
+        Campaign campaign = new Campaign(name, topic, description, amountTotal, logo);
+        campaignRepository.save(campaign);
 
         return "index";
     }

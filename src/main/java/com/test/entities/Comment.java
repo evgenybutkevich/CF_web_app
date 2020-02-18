@@ -13,6 +13,8 @@ public class Comment {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
+    private Integer path;
+
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id")
     private User author;
@@ -24,7 +26,8 @@ public class Comment {
     public Comment() {
     }
 
-    public Comment(User user, String text) {
+    public Comment(Integer path, User user, String text) {
+        this.path = path;
         this.author = user;
         this.text = text;
         this.date = new Date();
@@ -47,6 +50,14 @@ public class Comment {
     }
     public Integer getId() {
         return id;
+    }
+
+//--path
+    public void setPath(Integer path) {
+        this.path = path;
+    }
+    public Integer getPath() {
+        return path;
     }
 
 //--author

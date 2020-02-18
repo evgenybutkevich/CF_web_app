@@ -15,9 +15,6 @@
                 <a class="nav-link" href="/hello">Hello</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/comments">Comments</a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link" href="/login">Login</a>
             </li>
             <#if isAdmin>

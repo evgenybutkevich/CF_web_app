@@ -5,10 +5,9 @@
 <h1>Welcome to index page!</h1>
 
 <p>Click <a href="/hello">here</a> to see hello!</p>
-<p>Click <a href="/comments">here</a> to see/write comments!</p>
 <p>Click <a href="/users">here</a> to see users!</p>
-<p>Click <a href="/create">here</a> to create campaing!</p>
-<p>Click <a href="/view/2">here</a> to view campaings!</p>
+<p>Click <a href="/create">here</a> to create campaign!</p>
+<p>Click <a href="/campaigns/2">here</a> to view campaigns!</p>
 
 <div class="card-deck mt-5">
     <button class="btn btn-outline-primary" type="button">PREV</button>

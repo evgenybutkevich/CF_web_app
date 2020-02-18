@@ -1,17 +1,17 @@
 <#import "parts/main.ftlh" as m>
 
-<@m.main "Create campaing">
+<@m.main "Create campaign">
 
-<h1>Welcome to create campaing page!</h1>
+<h1>Welcome to create campaign page!</h1>
 
 <form method="post">
     <input name="_csrf" value="${_csrf.token}" type="hidden"/>
 
 <!--name-->
     <div class="form-group row">
-        <label class="col-sm-2 col-form-label m-0">Campaing name: </label>
+        <label class="col-sm-2 col-form-label m-0">Campaign name: </label>
         <div class="col-sm-5">
-            <input name="name" class="form-control" type="text" placeholder="enter campaing name"/>
+            <input name="name" class="form-control" type="text" placeholder="enter campaign name"/>
         </div>
     </div>
 

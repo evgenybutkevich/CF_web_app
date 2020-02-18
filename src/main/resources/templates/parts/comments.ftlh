@@ -1,9 +1,4 @@
-<#import "parts/main.ftlh" as m>
-<#include "parts/security.ftlh">
-
-<@m.main "Comments">
-
-<h4>List of comments</h4>
+<#include "security.ftlh">
 
 <#if isAdmin>
     <a class="btn btn-primary" data-toggle="collapse" href="#addComment" role="button" aria-expanded="false">
@@ -28,8 +23,6 @@
     </div>
 </#if>
 
-<hr>
-
 <#list comments as comments>
     <div class="media border border-primary bg-primary m-1">
         <img class="m-2" src="/icons/user-male.png" width="64px" height="64px">
@@ -50,7 +43,3 @@
 <#else>
     <p class="m-1"><b>No comments yet...</b></p>
 </#list>
-
-<hr>
-
-</@m.main>

@@ -1,9 +1,9 @@
 <#import "parts/main.ftlh" as m>
 
-<@m.main "View campaing">
+<@m.main "View campaign">
 
-<#if campaing??>
-    <h1 class="m-0">${campaing.name}</h1>
+<#if campaign??>
+    <h1 class="m-0">${campaign.name}</h1>
 
     <div class="row ml-0 mt-2 mb-2">
         <p class="text-secondary">Brief Project Description</p>
@@ -20,7 +20,7 @@
                 <h1>150$</h1>
 
                 <div class="form-group row mb-0">
-                    <p class="col-sm-6 col-form-label font-weight-bold">out of ${campaing.amountTotal} $</p>
+                    <p class="col-sm-6 col-form-label font-weight-bold">out of ${campaign.amountTotal} $</p>
 
                     <p class="col-sm-6 col-form-label font-weight-bold text-primary text-right">collected 15%</p>
                 </div>
@@ -37,7 +37,7 @@
 
                 <button class="btn btn-primary" type="submit">Support</button>
 
-                <p>${campaing.topic}</p>
+                <p>${campaign.topic}</p>
             </div>
         </div>
     </div>
@@ -56,21 +56,23 @@
 
 
     <div class="tab-content p-3">
-        <div class="tab-pane fade show active" id="description">${campaing.description}</div>
+        <div class="tab-pane fade show active" id="description">${campaign.description}</div>
 
-        <div class="tab-pane fade" id="comments">comments</div>
+        <div class="tab-pane fade" id="comments">
+            <#include "parts/comments.ftlh">
+        </div>
 
         <div class="tab-pane fade" id="sponsors">sponsors</div>
     </div>
 
     <div class="row">
-        <p class="col-sm-6 col-form-label font-weight-bold">${campaing.stringDateOfCreation}</p>
+        <p class="col-sm-6 col-form-label font-weight-bold">${campaign.stringDateOfCreation}</p>
 
-        <p class="col-sm-6 col-form-label font-weight-bold text-right">${campaing.stringDateOfUpdate}</p>
+        <p class="col-sm-6 col-form-label font-weight-bold text-right">${campaign.stringDateOfUpdate}</p>
     </div>
 
 <#else>
-    <p class="m-1"><b>No campaings yet...</b></p>
+    <p class="m-1"><b>No campaigns yet...</b></p>
 </#if>
 
 </@m.main>

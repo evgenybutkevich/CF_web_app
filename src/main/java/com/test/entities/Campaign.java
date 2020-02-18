@@ -6,8 +6,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @Entity
-@Table(name = "campaings")
-public class Campaing {
+@Table(name = "campaigns")
+public class Campaign {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -22,11 +22,11 @@ public class Campaing {
     private Date dateOfCreation;
     private Date dateOfUpdate;
 
-    public Campaing() {
+    public Campaign() {
 
     }
 
-    public Campaing(String name, String topic, String description, Double amountTotal, String logo) {
+    public Campaign(String name, String topic, String description, Double amountTotal, String logo) {
         this.name = name;
         this.topic = topic;
         this.description = description;
