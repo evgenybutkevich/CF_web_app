@@ -14,7 +14,7 @@
     <body>
         <#include "navbar.ftlh">
 
-        <div class="container col-lg-10 mt-3">
+        <div class="container col-lg-6 mt-3">
             <#nested>
         </div>
 

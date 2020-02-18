@@ -4,7 +4,6 @@ import com.test.entities.Campaing;
 import com.test.repositories.CampaingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,6 +24,10 @@ public class CampaingCreateController {
     @PostMapping
     public String addCampaing(@RequestParam String name, @RequestParam String topic, @RequestParam String description,
                               @RequestParam Double amountTotal, @RequestParam String logo) {
+        if (logo == "") {
+            logo = "no_image.png";
+        }
+
         Campaing campaing = new Campaing(name, topic, description, amountTotal, logo);
         campaingRepository.save(campaing);
 

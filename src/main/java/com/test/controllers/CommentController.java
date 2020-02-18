@@ -39,7 +39,7 @@ public class CommentController {
     public String addComment(
 
             @AuthenticationPrincipal User user, @RequestParam String text, @RequestParam("file") MultipartFile file, Model model) throws IOException {
-            Comment comment = new Comment(text, user);
+            Comment comment = new Comment(user, text);
 
             if (file != null && !file.getOriginalFilename().isEmpty()) {
                 File uploadDir = new File(String.format("%s%s%s", System.getProperty("user.dir"), File.separatorChar, uploadPath));

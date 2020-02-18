@@ -2,16 +2,75 @@
 
 <@m.main "View campaing">
 
-<h1>Welcome to campaing view page!</h1>
+<#if campaing??>
+    <h1 class="m-0">${campaing.name}</h1>
 
-<#list campaings as campaings>
-    <h4>${campaings.name}</h4>
-    <p>${campaings.topic}</p>
-    <p>${campaings.description}</p>
-    <p>${campaings.amountTotal}</p>
-    <img class="m-2" src="/icons/${campaings.logo}" width="64px" height="64px">
+    <div class="row ml-0 mt-2 mb-2">
+        <p class="text-secondary">Brief Project Description</p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8">
+            <img class="" src="/icons/city.jpg" width="100%">
+        </div>
+
+        <div class="col-md-4">
+        <div class="card rounded-0 border-0">
+            <div class="card-body p-2">
+                <h1>150$</h1>
+
+                <div class="form-group row mb-0">
+                    <p class="col-sm-6 col-form-label font-weight-bold">out of ${campaing.amountTotal} $</p>
+
+                    <p class="col-sm-6 col-form-label font-weight-bold text-primary text-right">collected 15%</p>
+                </div>
+
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <div class="form-group row mt-0">
+                    <p class="col-sm-4 col-form-label font-weight-bold text-center">supported</p>
+                    <p class="col-sm-4 col-form-label font-weight-bold text-center">remain</p>
+                    <p class="col-sm-4 col-form-label font-weight-bold text-center">created</p>
+                </div>
+
+                <button class="btn btn-primary" type="submit">Support</button>
+
+                <p>${campaing.topic}</p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <div class="row m-0 mt-3">
+        <div class="list-group list-group-horizontal">
+            <a class="list-group-item list-group-item-action active border-0" data-toggle="list" href="#description">Description</a>
+
+            <a class="list-group-item list-group-item-action border-0" data-toggle="list" href="#comments">Comments</a>
+
+            <a class="list-group-item list-group-item-action border-0" data-toggle="list" href="#sponsors">Sponsors</a>
+        </div>
+    </div>
+
+
+    <div class="tab-content p-3">
+        <div class="tab-pane fade show active" id="description">${campaing.description}</div>
+
+        <div class="tab-pane fade" id="comments">comments</div>
+
+        <div class="tab-pane fade" id="sponsors">sponsors</div>
+    </div>
+
+    <div class="row">
+        <p class="col-sm-6 col-form-label font-weight-bold">${campaing.stringDateOfCreation}</p>
+
+        <p class="col-sm-6 col-form-label font-weight-bold text-right">${campaing.stringDateOfUpdate}</p>
+    </div>
+
 <#else>
     <p class="m-1"><b>No campaings yet...</b></p>
-</#list>
+</#if>
 
 </@m.main>

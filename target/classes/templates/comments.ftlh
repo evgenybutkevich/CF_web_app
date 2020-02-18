@@ -44,7 +44,7 @@
                 </#if>
             </div>
 
-            <p class="m-1"><b>${comments.date}</b></p>
+            <p class="m-1"><b>${comments.stringDate}</b></p>
         </div>
     </div>
 <#else>

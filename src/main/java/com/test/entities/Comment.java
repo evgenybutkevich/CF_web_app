@@ -19,15 +19,15 @@ public class Comment {
 
     private String text;
     private String filename;
-    private String date;
+    private Date date;
 
     public Comment() {
     }
 
-    public Comment(String text, User user) {
-        this.date = getStringDate();
-        this.text = text;
+    public Comment(User user, String text) {
         this.author = user;
+        this.text = text;
+        this.date = new Date();
     }
 
     public String getAuthorName() {
@@ -35,7 +35,6 @@ public class Comment {
     }
 
     public String getStringDate() {
-        Date date = new Date();
         String stringDateFormat = "dd.MM.yyyy HH:mm:ss";
         DateFormat dateFormat = new SimpleDateFormat(stringDateFormat);
         String formattedDate = dateFormat.format(date);
@@ -75,10 +74,10 @@ public class Comment {
     }
 
 //--date
-    public void setDate(String date) {
+    public void setDate(Date date) {
         this.date = date;
     }
-    public String getDate() {
+    public Date getDate() {
         return date;
     }
 
