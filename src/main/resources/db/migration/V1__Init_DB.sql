@@ -1,5 +1,5 @@
 CREATE TABLE users (
-    id INTEGER NOT NULL,
+    id INTEGER NOT NULL AUTO_INCREMENT,
 
     username VARCHAR(30),
     email VARCHAR(255),
@@ -7,7 +7,7 @@ CREATE TABLE users (
 
     first_name VARCHAR(30),
     last_name VARCHAR(50),
-    birth_date DATETIME(6),
+    birth_date VARCHAR(30),
 
     active BIT NOT NULL,
 
@@ -21,7 +21,7 @@ CREATE TABLE user_role (
 );
 
 CREATE TABLE campaigns(
-    id INTEGER NOT NULL,
+    id INTEGER NOT NULL AUTO_INCREMENT,
 
     user_id INTEGER,
     campaign_name VARCHAR(255),
@@ -41,7 +41,7 @@ CREATE TABLE campaigns(
 );
 
 CREATE TABLE comments (
-    id INTEGER NOT NULL,
+    id INTEGER NOT NULL AUTO_INCREMENT,
 
     path INTEGER,
     user_id INTEGER,

@@ -1,4 +1,3 @@
-<#import "login.ftlh" as l>
 <#include "security.ftlh">
 
 <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
@@ -39,8 +38,8 @@
             </#if>
 
             <div class="navbar-text text-primary border-3 mr-3">Username: ${name}</div>
-            <#if isAdmin>
-                <@l.logout/>
+            <#if isUser>
+                <#include "logout.ftlh">
             </#if>
         </ul>
     </div>

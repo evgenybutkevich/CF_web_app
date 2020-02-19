@@ -3,7 +3,7 @@
 
 <@m.main "Registration">
 
-<h1>Welcome to registration page!</h1>
+<h1>Registration page!</h1>
 
 ${message?ifExists}
 
