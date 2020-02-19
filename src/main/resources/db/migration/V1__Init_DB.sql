@@ -7,7 +7,7 @@ CREATE TABLE users (
 
     first_name VARCHAR(30),
     last_name VARCHAR(50),
-    birth_date VARCHAR(30),
+    birth_date DATETIME(6),
 
     active BIT NOT NULL,
 

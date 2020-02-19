@@ -26,9 +26,9 @@
     <label class="col-form-label col-2 col-xl-2">Date of Birth: </label>
 
     <div class="col-10 col-sm-6 col-xl-4">
-        <input class="form-control" name="birth_date" id="birth_date"/>
+        <input class="form-control" name="birthday" id="birthday"/>
         <script>
-                $('#birth_date').datepicker({
+                $('#birthday').datepicker({
                     uiLibrary: 'bootstrap4',
                     format: 'dd.mm.yyyy'
                 });

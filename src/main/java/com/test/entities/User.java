@@ -5,6 +5,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
 import java.util.Collection;
+import java.util.Date;
 import java.util.Set;
 
 @Entity
@@ -21,7 +22,7 @@ public class User implements UserDetails {
 
     private String first_name;
     private String last_name;
-    private String birth_date;
+    private Date birth_date;
 
     private boolean active;
 
@@ -113,10 +114,10 @@ public class User implements UserDetails {
     }
 
 //--birth_date
-    public void setBirth_date(String birth_date) {
+    public void setBirth_date(Date birth_date) {
         this.birth_date = birth_date;
     }
-    public String getBirth_date() {
+    public Date getBirth_date() {
         return birth_date;
     }
 

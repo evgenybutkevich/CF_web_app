@@ -9,8 +9,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Collections;
+import java.util.Date;
 
 @Controller
 @RequestMapping("/registration")
@@ -25,7 +29,7 @@ public class RegistrationController {
     }
 
     @PostMapping
-    public String addUser(User user, Model model) {
+    public String addUser(User user, @RequestParam String birthday, Model model) throws ParseException {
         User userFromDatabase = userRepository.findByUsername(user.getUsername());
 
         if (userFromDatabase != null) {
@@ -33,7 +37,10 @@ public class RegistrationController {
             return "registration";
         }
 
+        Date birth_date = new SimpleDateFormat("dd.MM.yyyy").parse(birthday);
+
         user.setActive(true);
+        user.setBirth_date(birth_date);
         user.setRoles(Collections.singleton(Role.USER));
         userRepository.save(user);
         return "redirect:/login";
