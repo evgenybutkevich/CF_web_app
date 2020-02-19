@@ -37,7 +37,7 @@
                 </#if>
             </div>
 
-            <p class="m-1"><b>${comments.stringDate}</b></p>
+            <p class="m-1"><b>${comments.stringDateOfCreation}</b></p>
         </div>
     </div>
 <#else>

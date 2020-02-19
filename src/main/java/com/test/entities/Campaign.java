@@ -13,21 +13,37 @@ public class Campaign {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-    private String name;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "user_id")
+    private User author;
+
+    private String campaignName;
     private String topic;
+
+//    tags
+
     private String logo;
     private String description;
+
+//    images
+//    videos
+
     private Double amountTotal;
     private Double amountCollected;
+
+//    bonuses
+
     private Date dateOfCreation;
     private Date dateOfUpdate;
+    private Date dateOfExpiry;
 
     public Campaign() {
 
     }
 
-    public Campaign(String name, String topic, String description, Double amountTotal, String logo) {
-        this.name = name;
+    public Campaign(User user, String campaignName, String topic, String description, Double amountTotal, String logo) {
+        this.author = user;
+        this.campaignName = campaignName;
         this.topic = topic;
         this.description = description;
         this.amountTotal = amountTotal;
@@ -62,12 +78,20 @@ public class Campaign {
         return id;
     }
 
-//--name
-    public void setName(String name) {
-        this.name = name;
+//--author
+    public void setAuthor(User author) {
+        this.author = author;
     }
-    public String getName() {
-        return name;
+    public User getAuthor() {
+        return author;
+    }
+
+//--campaignName
+    public void setCampaignName(String campaignName) {
+        this.campaignName = campaignName;
+    }
+    public String getCampaignName() {
+        return campaignName;
     }
 
 //--topic
@@ -124,6 +148,14 @@ public class Campaign {
     }
     public Date getDateOfUpdate() {
         return dateOfUpdate;
+    }
+
+//--dateOfExpiry
+    public void setDateOfExpiry(Date dateOfExpiry) {
+        this.dateOfExpiry = dateOfExpiry;
+    }
+    public Date getDateOfExpiry() {
+        return dateOfExpiry;
     }
 
 }

@@ -3,11 +3,7 @@
 <@m.main "View campaign">
 
 <#if campaign??>
-    <h1 class="m-0">${campaign.name}</h1>
-
-    <div class="row ml-0 mt-2 mb-2">
-        <p class="text-secondary">Brief Project Description</p>
-    </div>
+    <h1 class="m-0">${campaign.campaignName}</h1>
 
     <div class="row">
         <div class="col-md-8">

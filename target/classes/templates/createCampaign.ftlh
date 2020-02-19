@@ -7,11 +7,11 @@
 <form method="post">
     <input name="_csrf" value="${_csrf.token}" type="hidden"/>
 
-<!--name-->
+<!--campaignName-->
     <div class="form-group row">
         <label class="col-sm-2 col-form-label m-0">Campaign name: </label>
         <div class="col-sm-5">
-            <input name="name" class="form-control" type="text" placeholder="enter campaign name"/>
+            <input name="campaignName" class="form-control" type="text" placeholder="enter campaign name"/>
         </div>
     </div>
 

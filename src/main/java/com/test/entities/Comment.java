@@ -21,7 +21,7 @@ public class Comment {
 
     private String text;
     private String filename;
-    private Date date;
+    private Date dateOfCreation;
 
     public Comment() {
     }
@@ -30,17 +30,17 @@ public class Comment {
         this.path = path;
         this.author = user;
         this.text = text;
-        this.date = new Date();
+        this.dateOfCreation = new Date();
     }
 
     public String getAuthorName() {
         return author.getUsername();
     }
 
-    public String getStringDate() {
+    public String getStringDateOfCreation() {
         String stringDateFormat = "dd.MM.yyyy HH:mm:ss";
         DateFormat dateFormat = new SimpleDateFormat(stringDateFormat);
-        String formattedDate = dateFormat.format(date);
+        String formattedDate = dateFormat.format(dateOfCreation);
         return formattedDate;
     }
 
@@ -84,12 +84,12 @@ public class Comment {
         return filename;
     }
 
-//--date
-    public void setDate(Date date) {
-        this.date = date;
+//--dateOfCreation
+    public void setDateOfCreation(Date dateOfCreation) {
+        this.dateOfCreation = dateOfCreation;
     }
-    public Date getDate() {
-        return date;
+    public Date getDateOfCreation() {
+        return dateOfCreation;
     }
 
 }

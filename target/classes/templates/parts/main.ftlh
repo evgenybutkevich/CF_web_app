@@ -11,10 +11,10 @@
         <title>${titleName}</title>
     </head>
 
-    <body>
+    <body class="bg-secondary">
         <#include "navbar.ftlh">
 
-        <div class="container col-lg-8 mt-3">
+        <div class="container col-lg-8 bg-white mt-3">
             <#nested>
         </div>
 

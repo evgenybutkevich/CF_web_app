@@ -21,6 +21,12 @@
     </parent>
 
     <dependencies>
+        <!--5th added dependencies-->
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-core</artifactId>
+        </dependency>
+
         <!--4th added dependencies-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
