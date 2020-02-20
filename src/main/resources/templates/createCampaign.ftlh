@@ -2,55 +2,66 @@
 
 <@m.main "Create campaign">
 
-<h1>Welcome to create campaign page!</h1>
+<h1>Create page!</h1>
 
-<form method="post">
+<form class="p-3" method="post">
     <input name="_csrf" value="${_csrf.token}" type="hidden"/>
 
-<!--campaignName-->
     <div class="form-group row">
-        <label class="col-sm-2 col-form-label m-0">Campaign name: </label>
-        <div class="col-sm-5">
-            <input name="campaignName" class="form-control" type="text" placeholder="enter campaign name"/>
+        <label class="col-form-label col-4 col-xl-2">Campaign name: </label>
+
+        <div class="col-8 col-sm-8 col-xl-6">
+            <input class="form-control" name="campaignName" type="text" placeholder="Campaign name"/>
         </div>
     </div>
 
-<!--topic-->
     <div class="form-group row">
-        <label class="col-sm-2 col-form-label">Topic: </label>
+        <label class="col-form-label col-4 col-xl-2">Topic: </label>
 
-        <div class="input-group col-sm-5">
+        <div class="input-group col-8 col-sm-8 col-xl-6">
             <select class="custom-select" name="topic">
-                <option value="Communication">Communication</option>
-                <option value="Electronics">Electronics</option>
-                <option value="Education">Education</option>
+                <#list topics as topics>
+                <option value="${topics.topicName}">${topics.topicName}</option>
+            </#list>
             </select>
         </div>
     </div>
 
-<!--description-->
     <div class="form-group row">
-        <label class="col-sm-2 col-form-label">Description: </label>
+        <label class="col-form-label col-4 col-xl-2">Description: </label>
 
-        <div class="col-sm-5">
-            <textarea name="description" class="form-control" rows="3"></textarea>
+        <div class="col-8 col-sm-8 col-xl-6">
+            <textarea class="form-control" name="description" rows="3" placeholder="Description"></textarea>
         </div>
     </div>
 
-<!--amountTotal-->
     <div class="form-group row">
-        <label class="col-sm-2 col-form-label">Amount: </label>
-        <div class="col-sm-5">
-            <input name="amountTotal" class="form-control" type="text" placeholder="$$$"/>
+        <label class="col-form-label col-4 col-xl-2">Amount (USD): </label>
+
+        <div class="col-8 col-sm-8 col-xl-6">
+            <input class="form-control" name="amountTotal" type="text" placeholder="Amount (USD)"/>
         </div>
     </div>
 
-<!--logo-->
     <div class="form-group row">
-        <label class="col-sm-2 col-form-label">Logo: </label>
+        <label class="col-form-label col-4 col-xl-2">Date of expiry: </label>
 
-        <div class="col-sm-5">
-            <input name="logo" class="form-control-file" type="file">
+        <div class="col-8 col-sm-8 col-xl-6">
+            <input class="form-control" name="expiry_date" id="expiry_date"/>
+            <script>
+                $('#expiry_date').datepicker({
+                    uiLibrary: 'bootstrap4',
+                    format: 'dd.mm.yyyy'
+                });
+            </script>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-form-label col-4 col-xl-2">Logo: </label>
+
+        <div class="col-8 col-sm-8 col-xl-6">
+            <input class="form-control-file" name="logo" type="file">
         </div>
     </div>
 

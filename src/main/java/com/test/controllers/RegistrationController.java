@@ -38,9 +38,9 @@ public class RegistrationController {
         }
 
         Date birth_date = new SimpleDateFormat("dd.MM.yyyy").parse(birthday);
+        user.setBirth_date(birth_date);
 
         user.setActive(true);
-        user.setBirth_date(birth_date);
         user.setRoles(Collections.singleton(Role.USER));
         userRepository.save(user);
         return "redirect:/login";

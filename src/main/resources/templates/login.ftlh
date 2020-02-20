@@ -3,7 +3,7 @@
 
 <@m.main "Login">
 
-<h1>Login page</h1>
+<h1>Login page!</h1>
 
 <@l.login "/login" "Login"/>
 

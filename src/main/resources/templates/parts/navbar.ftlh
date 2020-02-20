@@ -1,11 +1,11 @@
 <#include "security.ftlh">
 
 <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-expanded="false">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseArea" aria-expanded="false">
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarContent">
+    <div class="collapse navbar-collapse" id="collapseArea">
         <a class="navbar-brand" href="/">
             <img src="/icons/logo-globe.png" width="32" height="32">
         </a>
@@ -20,7 +20,11 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="/login">Login</a>
+                <#if isUser>
+                    <a class="nav-link" href="/create">Create</a>
+                <#else>
+                    <a class="nav-link disabled" href="/create">Create</a>
+                </#if>
             </li>
 
             <#if isAdmin>
@@ -31,15 +35,11 @@
         </ul>
 
         <ul class="navbar-nav">
+            <div class="navbar-text mr-3">${name}</div>
             <#if isUser>
-                <li class="nav-item">
-                    <a class="nav-link" href="/create">Create</a>
-                </li>
-            </#if>
-
-            <div class="navbar-text text-primary border-3 mr-3">Username: ${name}</div>
-            <#if isUser>
-                <#include "logout.ftlh">
+                <#include "logoutButton.ftlh">
+            <#else>
+                <a class="btn btn-primary" href="/login" role="button">Login</a>
             </#if>
         </ul>
     </div>

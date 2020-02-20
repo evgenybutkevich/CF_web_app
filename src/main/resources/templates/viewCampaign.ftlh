@@ -7,7 +7,7 @@
 
     <div class="row">
         <div class="col-md-8">
-            <img class="" src="/icons/city.jpg" width="100%">
+            <img class="" src="/icons/${campaign.logo}" width="100%">
         </div>
 
         <div class="col-md-4">

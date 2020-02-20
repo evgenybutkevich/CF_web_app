@@ -37,21 +37,6 @@ public class Campaign {
     private Date dateOfUpdate;
     private Date dateOfExpiry;
 
-    public Campaign() {
-
-    }
-
-    public Campaign(User user, String campaignName, String topic, String description, Double amountTotal, String logo) {
-        this.author = user;
-        this.campaignName = campaignName;
-        this.topic = topic;
-        this.description = description;
-        this.amountTotal = amountTotal;
-        this.dateOfCreation = new Date();
-        this.dateOfUpdate = null;
-        this.logo = logo;
-    }
-
     public String getStringDateOfCreation() {
         String stringDateFormat = "dd.MM.yyyy HH:mm:ss";
         DateFormat dateFormat = new SimpleDateFormat(stringDateFormat);

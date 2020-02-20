@@ -40,6 +40,13 @@ CREATE TABLE campaigns(
     PRIMARY KEY (id)
 );
 
+CREATE TABLE topics (
+    id INTEGER NOT NULL AUTO_INCREMENT,
+    topic_name VARCHAR(30),
+
+    PRIMARY KEY (id)
+);
+
 CREATE TABLE comments (
     id INTEGER NOT NULL AUTO_INCREMENT,
 
