@@ -11,7 +11,13 @@
         <label class="col-form-label col-4 col-xl-2">Campaign name: </label>
 
         <div class="col-8 col-sm-8 col-xl-6">
-            <input class="form-control" name="campaignName" type="text" placeholder="Campaign name"/>
+            <input class="form-control ${(campaignNameError??)?string('is-invalid', '')}" name="campaignName" type="text" value="<#if campaign??>${campaign.campaignName}</#if>" placeholder="Campaign name"/>
+
+            <#if campaignNameError??>
+                <div class="invalid-feedback">
+                    ${campaignNameError}
+                </div>
+            </#if>
         </div>
     </div>
 
@@ -21,8 +27,8 @@
         <div class="input-group col-8 col-sm-8 col-xl-6">
             <select class="custom-select" name="topic">
                 <#list topics as topics>
-                <option value="${topics.topicName}">${topics.topicName}</option>
-            </#list>
+                    <option value="${topics.topicName}">${topics.topicName}</option>
+                </#list>
             </select>
         </div>
     </div>
@@ -31,7 +37,13 @@
         <label class="col-form-label col-4 col-xl-2">Description: </label>
 
         <div class="col-8 col-sm-8 col-xl-6">
-            <textarea class="form-control" name="description" rows="3" placeholder="Description"></textarea>
+            <textarea class="form-control ${(descriptionError??)?string('is-invalid', '')}" name="description" rows="3" value="<#if campaign??>${campaign.description}</#if>" placeholder="Description"></textarea>
+
+            <#if descriptionError??>
+                <div class="invalid-feedback">
+                    ${descriptionError}
+                </div>
+            </#if>
         </div>
     </div>
 

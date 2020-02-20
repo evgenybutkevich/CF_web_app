@@ -2,32 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d588e86-06d9-47fe-a64f-02376b23c5da" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/configurations/MailConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/services/MailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/controllers/ControllerUtilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/test/configurations/WebSecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/test/configurations/WebSecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/test/controllers/CampaignCreateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/test/controllers/CampaignCreateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/test/controllers/CampaignViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/test/controllers/CampaignViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/test/controllers/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/test/controllers/RegistrationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/test/entities/Campaign.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/test/entities/Campaign.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/test/entities/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/test/entities/Comment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/test/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/test/entities/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/test/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/test/repositories/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/test/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/test/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V1__Init_DB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1__Init_DB.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.ftlh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V2__Add_admin.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V2__Add_admin.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/createCampaign.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/createCampaign.ftlh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/comments.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/comments.ftlh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/login.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/login.ftlh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/main.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/main.ftlh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/navbar.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/navbar.ftlh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/registration.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/registration.ftlh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.ftlh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/test.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/test/configurations/WebSecurityConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/configurations/WebSecurityConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/test/controllers/CampaignCreateController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/controllers/CampaignCreateController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/test/controllers/CampaignViewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/controllers/CampaignViewController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/test/controllers/RegistrationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/controllers/RegistrationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/test/entities/Campaign.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/entities/Campaign.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/test/entities/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/entities/Comment.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/test/entities/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/entities/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/repositories/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/repositories/UserRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/test/services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/services/UserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/db/migration/V1__Init_DB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db/migration/V1__Init_DB.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.ftlh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/migration/V2__Add_admin.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db/migration/V2__Add_admin.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/createCampaign.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/createCampaign.ftlh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/parts/comments.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/parts/comments.ftlh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/parts/login.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/parts/login.ftlh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/parts/main.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/parts/main.ftlh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/parts/navbar.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/parts/navbar.ftlh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/parts/registration.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/parts/registration.ftlh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/registration.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/registration.ftlh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,12 +77,13 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.test.Application" />
-      <module name="test" />
+      <module name="CF_web_app" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.test.*" />
@@ -106,14 +117,22 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="677" y="178" key="#Application" timestamp="1582227317845">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="677" y="178" key="#Application/0.0.1920.1040@0.0.1920.1040" timestamp="1582227317845" />
     <state x="690" y="274" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1582043512453">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="274" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582043512453" />
-    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1582193001010">
+    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1582220899709">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1582193001010" />
+    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1582220899709" />
+    <state x="640" y="255" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1582217903153">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="640" y="255" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582217903153" />
     <state x="508" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1582106132259">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -122,22 +141,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582010556723" />
-    <state width="1876" height="317" key="GridCell.Tab.0.bottom" timestamp="1582212508793">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1582240150385">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="317" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582212508793" />
-    <state width="1876" height="317" key="GridCell.Tab.0.center" timestamp="1582212508792">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582240150385" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1582239031254" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1582240150385">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="317" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582212508792" />
-    <state width="1876" height="317" key="GridCell.Tab.0.left" timestamp="1582212508792">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582240150385" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1582239031254" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1582240150385">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="317" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582212508792" />
-    <state width="1876" height="317" key="GridCell.Tab.0.right" timestamp="1582212508792">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582240150385" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1582239031254" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1582240150385">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="317" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582212508792" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582240150385" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1582239031254" />
     <state width="1876" height="342" key="GridCell.Tab.1.bottom" timestamp="1582114221034">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -158,14 +181,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="151" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1582098006931" />
-    <state x="655" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1582212543183">
+    <state x="655" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1582225331981">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="655" y="342" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582212543183" />
+    <state x="655" y="342" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582225331981" />
     <state x="525" y="255" width="869" height="606" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1581490265415">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="525" y="255" width="869" height="606" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1040@0.0.1920.1040" timestamp="1581490265415" />
+    <state x="690" y="274" key="extract.method.dialog" timestamp="1582222983494">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="274" key="extract.method.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582222983494" />
     <state x="623" y="225" key="search.everywhere.popup" timestamp="1582030134910">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

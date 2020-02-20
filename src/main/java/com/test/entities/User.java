@@ -1,9 +1,12 @@
 package com.test.entities;
 
+import org.hibernate.validator.constraints.Length;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
 import java.util.Collection;
 import java.util.Date;
 import java.util.Set;
@@ -16,16 +19,33 @@ public class User implements UserDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    @NotBlank(message = "Login cannot be empty!")
+    @Length(max = 30, message = "Login too long! (more than 30 characters)")
     private String username;
+
+    @NotBlank(message = "Password cannot be empty!")
     private String password;
 
+    @Transient
+    @NotBlank(message = "Password confirmation cannot be empty!")
+    private String password2;
+
+    @NotBlank(message = "Email cannot be empty!")
+    @Email(message = "Email is not correct!")
     private String email;
+
     private String activationCode;
     private Date registrationDate;
 
-    private String first_name;
-    private String last_name;
-    private Date birth_date;
+    @NotBlank(message = "First name cannot be empty!")
+    @Length(max = 30, message = "Login too long! (more than 30 characters)")
+    private String firstName;
+
+    @NotBlank(message = "Last name cannot be empty!")
+    @Length(max = 50, message = "Login too long! (more than 50 characters)")
+    private String lastName;
+
+    private Date birthDate;
 
     private boolean active;
 
@@ -92,6 +112,14 @@ public class User implements UserDetails {
         return password;
     }
 
+//--password2
+    public void setPassword2(String password2) {
+        this.password2 = password2;
+    }
+    public String getPassword2() {
+        return password2;
+    }
+
 //--email
     public void setEmail(String email) {
         this.email = email;
@@ -117,27 +145,27 @@ public class User implements UserDetails {
     }
 
 //--first_name
-    public void setFirst_name(String first_name) {
-        this.first_name = first_name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
-    public String getFirst_name() {
-        return first_name;
+    public String getFirstName() {
+        return firstName;
     }
 
 //--last_name
-    public void setLast_name(String last_name) {
-        this.last_name = last_name;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
-    public String getLast_name() {
-        return last_name;
+    public String getLastName() {
+        return lastName;
     }
 
 //--birth_date
-    public void setBirth_date(Date birth_date) {
-        this.birth_date = birth_date;
+    public void setBirthDate(Date birthDate) {
+        this.birthDate = birthDate;
     }
-    public Date getBirth_date() {
-        return birth_date;
+    public Date getBirthDate() {
+        return birthDate;
     }
 
 //--active

@@ -1,6 +1,6 @@
 <#include "security.ftlh">
 
-<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark nav-pills">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseArea" aria-expanded="false">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -12,16 +12,16 @@
 
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link <#if titleName == 'Index'>active</#if>" href="/">Home</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="/hello">Hello</a>
+                <a class="nav-link <#if titleName == 'Hello'>active</#if>" href="/hello">Hello</a>
             </li>
 
             <li class="nav-item">
                 <#if isUser>
-                    <a class="nav-link" href="/create">Create</a>
+                    <a class="nav-link <#if titleName == 'Create campaign'>active</#if>" href="/create">Create</a>
                 <#else>
                     <a class="nav-link disabled" href="/create">Create</a>
                 </#if>
@@ -29,7 +29,7 @@
 
             <#if isAdmin>
                 <li class="nav-item">
-                    <a class="nav-link" href="/users">Users</a>
+                    <a class="nav-link <#if titleName == 'Users'>active</#if>" href="/users">Users</a>
                 </li>
             </#if>
         </ul>

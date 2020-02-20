@@ -1,11 +1,28 @@
 <div class="form-group row">
+    <label class="col-form-label col-2 col-xl-2">Confirm password: </label>
+
+    <div class="col-10 col-sm-6 col-xl-4">
+        <input class="form-control ${(password2Error??)?string('is-invalid', '')}" name="password2" type="password" placeholder="Confirm password"/>
+
+        <#if password2Error??>
+            <div class="invalid-feedback">
+                ${password2Error}
+            </div>
+        </#if>
+    </div>
+</div>
+
+<div class="form-group row">
     <label class="col-form-label col-2 col-xl-2">Email: </label>
 
     <div class="col-10 col-sm-6 col-xl-4">
-        <input class="form-control" name="email" type="email" placeholder="example@example.com"/>
+        <input class="form-control ${(emailError??)?string('is-invalid', '')}" name="email" type="email" value="<#if user??>${user.email}</#if>" placeholder="example@example.com"/>
 
-        <div class="text-center text-danger">${email?ifExists}</div>
-
+        <#if emailError??>
+            <div class="invalid-feedback">
+                ${emailError}
+            </div>
+        </#if>
     </div>
 </div>
 
@@ -13,7 +30,13 @@
     <label class="col-form-label col-2 col-xl-2">First name: </label>
 
     <div class="col-10 col-sm-6 col-xl-4">
-        <input class="form-control" name="first_name" type="text" placeholder="First name"/>
+        <input class="form-control ${(firstNameError??)?string('is-invalid', '')}" name="firstName" type="text" value="<#if user??>${user.firstName}</#if>" placeholder="First name"/>
+
+        <#if firstNameError??>
+            <div class="invalid-feedback">
+                ${firstNameError}
+            </div>
+        </#if>
     </div>
 </div>
 
@@ -21,7 +44,13 @@
     <label class="col-form-label col-2 col-xl-2">Last name: </label>
 
     <div class="col-10 col-sm-6 col-xl-4">
-        <input class="form-control" name="last_name" type="text" placeholder="Last name"/>
+        <input class="form-control ${(lastNameError??)?string('is-invalid', '')}" name="lastName" type="text" value="<#if user??>${user.lastName}</#if>" placeholder="Last name"/>
+
+        <#if lastNameError??>
+            <div class="invalid-feedback">
+                ${lastNameError}
+            </div>
+        </#if>
     </div>
 </div>
 

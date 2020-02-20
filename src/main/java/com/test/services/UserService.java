@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
@@ -24,6 +25,9 @@ public class UserService implements UserDetailsService {
 
     @Autowired
     private MailService mailService;
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -43,14 +47,15 @@ public class UserService implements UserDetailsService {
             return "email exists";
         }
 
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
         user.setActivationCode(UUID.randomUUID().toString());
         user.setRegistrationDate(new Date());
 
         if (birthday != "") {
             Date birth_date = new SimpleDateFormat("dd.MM.yyyy").parse(birthday);
-            user.setBirth_date(birth_date);
+            user.setBirthDate(birth_date);
         } else {
-            user.setBirth_date(null);
+            user.setBirthDate(null);
         }
 
         user.setActive(false);
@@ -61,7 +66,7 @@ public class UserService implements UserDetailsService {
             String message = String.format(
                     "Hello, %s! \n" +
                         "Please, confirm your email by visiting next link: http://localhost:8080/activation/%s",
-                            user.getFirst_name(), user.getActivationCode());
+                            user.getFirstName(), user.getActivationCode());
 
             mailService.send(user.getEmail(), "Activation code", message);
         }
@@ -76,6 +81,7 @@ public class UserService implements UserDetailsService {
             return false;
         }
 
+        user.setPassword2(user.getPassword());
         user.setActivationCode(null);
         user.setActive(true);
         userRepository.save(user);

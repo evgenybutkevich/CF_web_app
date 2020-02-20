@@ -1,6 +1,9 @@
 package com.test.entities;
 
+import org.hibernate.validator.constraints.Length;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -19,19 +22,12 @@ public class Comment {
     @JoinColumn(name = "user_id")
     private User author;
 
+    @NotBlank(message = "Comment cannot be empty!")
+    @Length(max = 1024, message = "Comment too long! (more than 1024 characters)")
     private String text;
+
     private String filename;
     private Date dateOfCreation;
-
-    public Comment() {
-    }
-
-    public Comment(Integer path, User user, String text) {
-        this.path = path;
-        this.author = user;
-        this.text = text;
-        this.dateOfCreation = new Date();
-    }
 
     public String getAuthorName() {
         return author.getUsername();

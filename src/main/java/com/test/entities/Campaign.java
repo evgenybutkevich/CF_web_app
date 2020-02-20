@@ -1,6 +1,9 @@
 package com.test.entities;
 
+import org.hibernate.validator.constraints.Length;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -17,18 +20,25 @@ public class Campaign {
     @JoinColumn(name = "user_id")
     private User author;
 
+    @NotBlank(message = "Campaign name cannot be empty!")
+    @Length(max = 255, message = "Campaign name too long! (more than 255 characters)")
     private String campaignName;
+
     private String topic;
 
 //    tags
 
     private String logo;
+
+    @NotBlank(message = "Description cannot be empty!")
+    @Length(max = 1024, message = "Description too long! (more than 1024 characters)")
     private String description;
 
 //    images
 //    videos
 
     private Double amountTotal;
+
     private Double amountCollected;
 
 //    bonuses

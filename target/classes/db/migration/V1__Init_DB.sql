@@ -1,8 +1,8 @@
 CREATE TABLE users (
     id INTEGER NOT NULL AUTO_INCREMENT,
 
-    username VARCHAR(30),
-    password VARCHAR(255),
+    username VARCHAR(30) NOT NULL,
+    password VARCHAR(255) NOT NULL,
 
     email VARCHAR(255),
     activation_code VARCHAR(255),
@@ -20,18 +20,18 @@ CREATE TABLE users (
 CREATE TABLE user_role (
     user_id INTEGER NOT NULL,
 
-    roles VARCHAR(20)
+    roles VARCHAR(10)
 );
 
 CREATE TABLE campaigns(
     id INTEGER NOT NULL AUTO_INCREMENT,
 
-    user_id INTEGER,
+    user_id INTEGER NOT NULL,
     campaign_name VARCHAR(255),
     topic VARCHAR(50),
 
     logo VARCHAR(255),
-    description VARCHAR(255),
+    description VARCHAR(1024),
 
     amount_total DOUBLE PRECISION,
     amount_collected DOUBLE PRECISION,
@@ -53,9 +53,9 @@ CREATE TABLE topics (
 CREATE TABLE comments (
     id INTEGER NOT NULL AUTO_INCREMENT,
 
-    path INTEGER,
-    user_id INTEGER,
-    text VARCHAR(255),
+    path INTEGER NOT NULL,
+    user_id INTEGER NOT NULL,
+    text VARCHAR(1024),
     filename VARCHAR(255),
     date_of_creation DATETIME(6),
 
