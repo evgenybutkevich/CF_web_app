@@ -17,8 +17,11 @@ public class User implements UserDetails {
     private Integer id;
 
     private String username;
-    private String email;
     private String password;
+
+    private String email;
+    private String activationCode;
+    private Date registrationDate;
 
     private String first_name;
     private String last_name;
@@ -75,14 +78,6 @@ public class User implements UserDetails {
         return isActive();
     }
 
-//--email
-    public void setEmail(String email) {
-        this.email = email;
-    }
-    public String getEmail() {
-        return email;
-    }
-
 //--password
     public void setPassword(String password) {
         this.password = password;
@@ -95,6 +90,30 @@ public class User implements UserDetails {
 
     public String getPassword() {
         return password;
+    }
+
+//--email
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    public String getEmail() {
+        return email;
+    }
+
+//--activationCode
+    public void setActivationCode(String activationCode) {
+        this.activationCode = activationCode;
+    }
+    public String getActivationCode() {
+        return activationCode;
+    }
+
+//--registrationDate
+    public void setRegistrationDate(Date registrationDate) {
+        this.registrationDate = registrationDate;
+    }
+    public Date getRegistrationDate() {
+        return registrationDate;
     }
 
 //--first_name

@@ -5,8 +5,6 @@
 
 <h1>Registration page!</h1>
 
-${message?ifExists}
-
 <@l.login "/registration" "Sign up"/>
 
 </@m.main>

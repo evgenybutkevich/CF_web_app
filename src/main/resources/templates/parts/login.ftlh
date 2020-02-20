@@ -3,11 +3,17 @@
 <form class="p-3" method="post" action="${path}">
     <input name="_csrf" value="${_csrf.token}" type="hidden"/>
 
+
+
     <div class="form-group row">
         <label class="col-form-label col-2 col-xl-2">Login: </label>
 
         <div class="col-10 col-sm-6 col-xl-4">
             <input class="form-control" name="username" type="text" placeholder="Login"/>
+
+            <#if path == "/registration">
+                <div class="text-center text-danger">${name?ifExists}</div>
+            </#if>
         </div>
     </div>
 
@@ -16,13 +22,15 @@
 
         <div class="col-10 col-sm-6 col-xl-4">
             <input class="form-control" name="password" type="password" placeholder="Password"/>
+
+            <div class="text-center text-success">${active?ifExists}</div>
         </div>
     </div>
 
     <#if path == "/registration">
         <#include "registration.ftlh">
     <#else>
-        <p>Click <a href="/registration">here</a> to sign up!</p>
+        <p>Don't have an account? Click <a href="/registration">here</a> to sign up!</p>
     </#if>
 
     <button class="btn btn-primary" type="submit">${buttonName}</button>

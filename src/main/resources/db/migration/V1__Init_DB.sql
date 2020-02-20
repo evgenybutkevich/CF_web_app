@@ -2,8 +2,11 @@ CREATE TABLE users (
     id INTEGER NOT NULL AUTO_INCREMENT,
 
     username VARCHAR(30),
-    email VARCHAR(255),
     password VARCHAR(255),
+
+    email VARCHAR(255),
+    activation_code VARCHAR(255),
+    registration_date DATETIME(6),
 
     first_name VARCHAR(30),
     last_name VARCHAR(50),

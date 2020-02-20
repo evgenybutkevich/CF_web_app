@@ -5,6 +5,6 @@
 
 <h1>Login page!</h1>
 
-<@l.login "/login" "Login"/>
+<@l.login "/login" "Sign in"/>
 
 </@m.main>

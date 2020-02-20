@@ -21,6 +21,12 @@
     </parent>
 
     <dependencies>
+        <!--6th added dependencies-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+        </dependency>
+
         <!--5th added dependencies-->
         <dependency>
             <groupId>org.flywaydb</groupId>

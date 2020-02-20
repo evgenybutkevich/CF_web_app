@@ -2,7 +2,10 @@
     <label class="col-form-label col-2 col-xl-2">Email: </label>
 
     <div class="col-10 col-sm-6 col-xl-4">
-        <input class="form-control" name="email" type="text" placeholder="Email"/>
+        <input class="form-control" name="email" type="email" placeholder="example@example.com"/>
+
+        <div class="text-center text-danger">${email?ifExists}</div>
+
     </div>
 </div>
 
@@ -35,3 +38,5 @@
         </script>
     </div>
 </div>
+
+<p>Already have an account? Click <a href="/login">here</a> to sign in!</p>
