@@ -1,6 +1,6 @@
 <#include "security.ftlh">
 
-<#if isAdmin>
+<#if isUser>
     <a class="btn btn-primary" data-toggle="collapse" href="#addComment" role="button" aria-expanded="false">
         Add comment
     </a>
@@ -30,9 +30,7 @@
 </#if>
 
 <#list comments as comments>
-    <div class="media border border-primary bg-primary m-1">
-        <img class="m-2" src="/icons/user-male.png" width="64px" height="64px">
-
+    <div class="media border border-primary m-1">
         <div class="media-body bg-white">
             <p class="m-1"><b>${comments.authorName}</b></p>
             <p class="text-break ml-3 m-1"><mark class="bg-warning">- ${comments.text}</mark></p>

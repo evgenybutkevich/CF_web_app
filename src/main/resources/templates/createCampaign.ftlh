@@ -2,7 +2,7 @@
 
 <@m.main "Create campaign">
 
-<h1>Create page!</h1>
+<h1>Create campaign page!</h1>
 
 <form class="p-3" method="post">
     <input name="_csrf" value="${_csrf.token}" type="hidden"/>
@@ -11,7 +11,8 @@
         <label class="col-form-label col-4 col-xl-2">Campaign name: </label>
 
         <div class="col-8 col-sm-8 col-xl-6">
-            <input class="form-control ${(campaignNameError??)?string('is-invalid', '')}" name="campaignName" type="text" value="<#if campaign??>${campaign.campaignName}</#if>" placeholder="Campaign name"/>
+            <input class="form-control ${(campaignNameError??)?string('is-invalid', '')}" name="campaignName" type="text"
+                   value="<#if campaign??>${campaign.campaignName}</#if>" placeholder="enter campaign name"/>
 
             <#if campaignNameError??>
                 <div class="invalid-feedback">
@@ -37,7 +38,8 @@
         <label class="col-form-label col-4 col-xl-2">Description: </label>
 
         <div class="col-8 col-sm-8 col-xl-6">
-            <textarea class="form-control ${(descriptionError??)?string('is-invalid', '')}" name="description" rows="3" placeholder="Description"><#if campaign??>${campaign.description}</#if></textarea>
+            <textarea class="form-control ${(descriptionError??)?string('is-invalid', '')}" name="description"
+                rows="3" placeholder="enter description"></textarea>
 
             <#if descriptionError??>
                 <div class="invalid-feedback">
@@ -51,7 +53,7 @@
         <label class="col-form-label col-4 col-xl-2">Amount (USD): </label>
 
         <div class="col-8 col-sm-8 col-xl-6">
-            <input class="form-control" name="amountTotal" type="text" placeholder="Amount (USD)"/>
+            <input class="form-control" name="amountTotal" type="text" placeholder="enter amount in USD"/>
         </div>
     </div>
 

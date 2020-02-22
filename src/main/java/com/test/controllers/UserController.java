@@ -22,12 +22,13 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
+
     @GetMapping
     public String users(Model model) {
-        Iterable<User> users = userRepository.findAll();
-        model.addAttribute("users", users);
+        model.addAttribute("users", userRepository.findAll());
         return "users";
     }
+
 
     @GetMapping("{user}")
     public String userEdit(
@@ -38,10 +39,12 @@ public class UserController {
         return "userEdit";
     }
 
+
     @PostMapping
     public String saveUser(
 
         @RequestParam("userId") User user, @RequestParam String username, @RequestParam Map<String, String> form) {
+
         user.setUsername(username);
 
         Set<String> roles = Arrays.stream(Role.values()).map(Role::name).collect(Collectors.toSet());

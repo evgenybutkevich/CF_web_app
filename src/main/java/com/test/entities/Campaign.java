@@ -13,7 +13,7 @@ import java.util.Date;
 public class Campaign {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @ManyToOne(fetch = FetchType.EAGER)
@@ -26,31 +26,29 @@ public class Campaign {
 
     private String topic;
 
-//    tags
-
-    private String logo;
-
     @NotBlank(message = "Description cannot be empty!")
     @Length(max = 1024, message = "Description too long! (more than 1024 characters)")
     private String description;
 
-//    images
-//    videos
 
     private Double amountTotal;
-
     private Double amountCollected;
-
-//    bonuses
-
     private Date dateOfCreation;
     private Date dateOfUpdate;
     private Date dateOfExpiry;
+    private String logo;
 
     public String getStringDateOfCreation() {
-        String stringDateFormat = "dd.MM.yyyy HH:mm:ss";
+        String stringDateFormat = "dd.MM.yyyy";
         DateFormat dateFormat = new SimpleDateFormat(stringDateFormat);
         String formattedDate = dateFormat.format(dateOfCreation);
+        return formattedDate;
+    }
+
+    public String getStringDateOfExpiry() {
+        String stringDateFormat = "dd.MM.yyyy";
+        DateFormat dateFormat = new SimpleDateFormat(stringDateFormat);
+        String formattedDate = dateFormat.format(dateOfExpiry);
         return formattedDate;
     }
 
@@ -95,14 +93,6 @@ public class Campaign {
     }
     public String getTopic() {
         return topic;
-    }
-
-//--logo
-    public void setLogo(String logo) {
-        this.logo = logo;
-    }
-    public String getLogo() {
-        return logo;
     }
 
 //--description
@@ -151,6 +141,14 @@ public class Campaign {
     }
     public Date getDateOfExpiry() {
         return dateOfExpiry;
+    }
+
+//--logo
+    public void setLogo(String logo) {
+        this.logo = logo;
+    }
+    public String getLogo() {
+        return logo;
     }
 
 }

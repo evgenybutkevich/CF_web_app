@@ -29,41 +29,42 @@ public class CampaignCreateController {
     @Autowired
     private TopicRepository topicRepository;
 
+
     @GetMapping("/create")
-    public String createCampaign(Model model) {
+    public String create(Model model) {
+
         Iterable<Topic> topics = topicRepository.findAll();
         model.addAttribute("topics", topics);
         return "createCampaign";
     }
+
 
     @PostMapping("/create")
     public String addCampaign(@AuthenticationPrincipal User user, @Valid Campaign campaign,
                               BindingResult bindingResult, @RequestParam String expiry_date,
                               Model model) throws ParseException {
 
-        campaign.setAuthor(user);
-
-        if (campaign.getLogo() == "") {
-            campaign.setLogo("no_image.png");
-        }
-
-        campaign.setDateOfCreation(new Date());
-
         if (bindingResult.hasErrors()) {
             Map<String, String> errorsMap = ControllerUtilities.getErrors(bindingResult);
             model.mergeAttributes(errorsMap);
-            model.addAttribute("campaign", campaign);
 
+            model.addAttribute("campaign", campaign);
             Iterable<Topic> topics = topicRepository.findAll();
             model.addAttribute("topics", topics);
-
             return "createCampaign";
         } else {
-//?????
+            campaign.setAuthor(user);
+            campaign.setAmountCollected(0.0);
+            campaign.setDateOfCreation(new Date());
+
             Date dateOfExpiry = new SimpleDateFormat("dd.MM.yyyy").parse(expiry_date);
             campaign.setDateOfExpiry(dateOfExpiry);
 
-            model.addAttribute("campaign", null);
+            if (campaign.getLogo() == "") {
+                campaign.setLogo("city.jpg");
+            }
+
+            model.addAttribute("campaign", "Campaign successfully created!");
             campaignRepository.save(campaign);
         }
 

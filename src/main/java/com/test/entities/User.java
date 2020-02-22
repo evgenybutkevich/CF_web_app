@@ -26,10 +26,6 @@ public class User implements UserDetails {
     @NotBlank(message = "Password cannot be empty!")
     private String password;
 
-    @Transient
-    @NotBlank(message = "Password confirmation cannot be empty!")
-    private String password2;
-
     @NotBlank(message = "Email cannot be empty!")
     @Email(message = "Email is not correct!")
     private String email;
@@ -45,8 +41,9 @@ public class User implements UserDetails {
     @Length(max = 50, message = "Login too long! (more than 50 characters)")
     private String lastName;
 
+    private String sex;
     private Date birthDate;
-
+    private String avatar;
     private boolean active;
 
     @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
@@ -112,14 +109,6 @@ public class User implements UserDetails {
         return password;
     }
 
-//--password2
-    public void setPassword2(String password2) {
-        this.password2 = password2;
-    }
-    public String getPassword2() {
-        return password2;
-    }
-
 //--email
     public void setEmail(String email) {
         this.email = email;
@@ -160,12 +149,28 @@ public class User implements UserDetails {
         return lastName;
     }
 
+//--sex
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+    public String getSex() {
+        return sex;
+    }
+
 //--birth_date
     public void setBirthDate(Date birthDate) {
         this.birthDate = birthDate;
     }
     public Date getBirthDate() {
         return birthDate;
+    }
+
+//--avatar
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
+    public String getAvatar() {
+        return avatar;
     }
 
 //--active

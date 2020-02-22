@@ -7,14 +7,12 @@
         <label class="col-form-label col-2 col-xl-2">Login: </label>
 
         <div class="col-10 col-sm-6 col-xl-4">
-            <input class="form-control ${(usernameError??)?string('is-invalid', '')}" name="username" type="text" value="<#if user??>${user.username}</#if>" placeholder="Login"/>
+            <input class="form-control ${(usernameError??)?string('is-invalid', '')}" name="username" type="text"
+                value="<#if user??>${user.username}</#if>"
+                    placeholder="enter login <#if path == '/registration'>(30 characters max)</#if>"/>
 
-            <#if path == "/registration">
-                <#if usernameError??>
-                    <div class="invalid-feedback">
-                        ${usernameError}
-                    </div>
-                </#if>
+            <#if usernameError??>
+                <div class="invalid-feedback">${usernameError}</div>
             </#if>
         </div>
     </div>
@@ -23,14 +21,11 @@
         <label class="col-form-label col-2 col-xl-2">Password: </label>
 
         <div class="col-10 col-sm-6 col-xl-4">
-            <input class="form-control ${(passwordError??)?string('is-invalid', '')}" name="password" type="password" placeholder="Password"/>
+            <input class="form-control ${(passwordError??)?string('is-invalid', '')}" name="password" type="password"
+                placeholder="enter password"/>
 
-            <#if path == "/registration">
-                <#if passwordError??>
-                    <div class="invalid-feedback">
-                        ${passwordError}
-                    </div>
-                </#if>
+            <#if passwordError??>
+                <div class="invalid-feedback">${passwordError}</div>
             </#if>
 
             <div class="text-center text-success">${active?ifExists}</div>
@@ -38,8 +33,8 @@
         </div>
     </div>
 
-    <#if path == "/registration">
-        <#include "registration.ftlh">
+    <#if path == '/registration'>
+        <#include 'registration.ftlh'>
     <#else>
         <p>Don't have an account? Click <a href="/registration">here</a> to sign up!</p>
     </#if>

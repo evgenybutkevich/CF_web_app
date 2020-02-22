@@ -81,11 +81,11 @@ public class UserService implements UserDetailsService {
             return false;
         }
 
-        user.setPassword2(user.getPassword());
         user.setActivationCode(null);
         user.setActive(true);
         userRepository.save(user);
 
         return true;
     }
+
 }
