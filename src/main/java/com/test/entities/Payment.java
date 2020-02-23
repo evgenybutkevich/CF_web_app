@@ -13,19 +13,27 @@ public class Payment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "campaign_id", updatable = false)
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "campaign_id")
     private Campaign recipient;
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "user_id", updatable = false)
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
     private User author;
 
     private Double amount;
     private Date dateOfCreation;
 
+    public Integer getAuthorId() {
+        return author.getId();
+    }
+
     public String getAuthorName() {
-        return author.getUsername();
+        return author.getFirstName();
+    }
+
+    public String getAuthorAvatar() {
+        return author.getAvatar();
     }
 
     public String getStringDateOfCreation() {

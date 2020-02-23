@@ -16,7 +16,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link <#if titleName == 'Hello'>active</#if>" href="/hello">Hello</a>
+                <a class="nav-link <#if titleName == 'Campaigns'>active</#if>" href="/campaigns">Campaigns</a>
             </li>
 
             <li class="nav-item">
@@ -36,6 +36,7 @@
 
         <ul class="navbar-nav">
             <div class="navbar-text mr-3">${name}</div>
+
             <#if isUser>
                 <#include "logoutButton.ftlh">
             <#else>

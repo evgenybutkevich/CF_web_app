@@ -30,9 +30,13 @@
 </#if>
 
 <#list comments as comments>
-    <div class="media border border-primary m-1">
+    <div class="media border border-primary bg-primary m-1">
+        <#if comments.authorAvatar??>
+            <img class="m-2" src="/icons/${comments.authorAvatar}" width="64px">
+        </#if>
+
         <div class="media-body bg-white">
-            <p class="m-1"><b>${comments.authorName}</b></p>
+            <p class="m-1"><b><a href="/users/view/${campaign.authorId}">${comments.authorName}</a></b></p>
             <p class="text-break ml-3 m-1"><mark class="bg-warning">- ${comments.text}</mark></p>
 
             <div>

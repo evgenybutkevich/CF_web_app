@@ -3,7 +3,11 @@
 <@m.main 'View campaign'>
 
 <#if campaign??>
-    <h1>${campaign.campaignName} (topic: <a href="/topics/${campaign.topic}">${campaign.topic}</a>)</h1>
+    <h1>${campaign.campaignName}</h1>
+    <h4>
+        (topic: <a href="/topics/${campaign.topic}">${campaign.topic}</a>,
+        author: <a href="/topics/${campaign.topic}">${campaign.authorName})</a>
+    </h4>
 
     <div class="row">
 
@@ -67,7 +71,7 @@
 
 
     <div class="tab-content p-3">
-        <div class="tab-pane fade show active" id="description">${campaign.description}</div>
+        <div class="tab-pane fade show active" id="description"><p class="m-1"><b>${campaign.description}</b></p></div>
 
         <div class="tab-pane fade" id="comments"><#include "parts/comments.ftlh"></div>
 

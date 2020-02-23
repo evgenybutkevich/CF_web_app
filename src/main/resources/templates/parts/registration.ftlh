@@ -11,7 +11,6 @@
         </div>
     </div>
 
-
     <div class="form-group row">
         <label class="col-form-label col-2 col-xl-2">Email: </label>
 
@@ -24,7 +23,6 @@
             </#if>
         </div>
     </div>
-
 
     <div class="form-group row">
         <label class="col-form-label col-2 col-xl-2">First name: </label>
@@ -39,7 +37,6 @@
         </div>
     </div>
 
-
     <div class="form-group row">
         <label class="col-form-label col-2 col-xl-2">Last name: </label>
 
@@ -53,6 +50,16 @@
         </div>
     </div>
 
+    <div class="form-group row">
+        <label class="col-form-label col-4 col-xl-2">Sex: </label>
+
+        <div class="input-group col-10 col-sm-6 col-xl-4">
+            <select class="custom-select" name="sex">
+                <option value="male">male</option>
+                <option value="female">female</option>
+            </select>
+        </div>
+    </div>
 
     <div class="form-group row">
         <label class="col-form-label col-2 col-xl-2">Date of Birth: </label>
@@ -68,5 +75,12 @@
         </div>
     </div>
 
+    <div class="form-group row">
+        <label class="col-form-label col-2 col-xl-2">Avatar: </label>
+
+        <div class="col-8 col-sm-8 col-xl-6">
+            <input name="avatar" class="form-control-file" type="file">
+        </div>
+    </div>
 
     <p>Already have an account? Click <a href="/login">here</a> to sign in!</p>

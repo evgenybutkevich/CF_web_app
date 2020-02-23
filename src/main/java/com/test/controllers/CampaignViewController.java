@@ -42,6 +42,14 @@ public class CampaignViewController {
     private String uploadPath;
 
 
+    @GetMapping("/campaigns")
+    public String campaigns(Model model) {
+        Iterable<Campaign> campaigns = campaignRepository.findAll();
+        model.addAttribute("campaigns", campaigns);
+        return "campaigns";
+    }
+
+
     @GetMapping("/campaigns/{id}")
     public String view(@PathVariable Integer id, Model model) {
 

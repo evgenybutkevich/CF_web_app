@@ -58,6 +58,14 @@ public class UserService implements UserDetailsService {
             user.setBirthDate(null);
         }
 
+        if (user.getAvatar() == "") {
+            if (user.getSex() == "male") {
+                user.setAvatar("user-male.png");
+            } else {
+                user.setAvatar("user-female.png");
+            }
+        }
+
         user.setActive(false);
         user.setRoles(Collections.singleton(Role.USER));
         userRepository.save(user);

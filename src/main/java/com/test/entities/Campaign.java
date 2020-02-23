@@ -38,6 +38,14 @@ public class Campaign {
     private Date dateOfExpiry;
     private String logo;
 
+    public Integer getAuthorId() {
+        return author.getId();
+    }
+
+    public String getAuthorName() {
+        return author.getFirstName();
+    }
+
     public String getStringDateOfCreation() {
         String stringDateFormat = "dd.MM.yyyy";
         DateFormat dateFormat = new SimpleDateFormat(stringDateFormat);

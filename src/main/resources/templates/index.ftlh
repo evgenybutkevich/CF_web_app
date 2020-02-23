@@ -2,10 +2,9 @@
 
 <@m.main "Index">
 
-<p>Click <a href="/hello">here</a> to see hello!</p>
+<h1>Main page!</h1>
+
 <p>Click <a href="/users">here</a> to see users!</p>
-<p>Click <a href="/campaigns/1">here</a> to view campaigns!</p>
-<p>Click <a href="/payments/1">here</a> to make payment!</p>
 
 <div class="card-deck mt-5 p-2">
     <button class="btn btn-outline-primary" type="button">PREV</button>
