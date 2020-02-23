@@ -15,10 +15,10 @@
         <title>${titleName}</title>
     </head>
 
-    <body class="bg-secondary">
+    <body>
         <#include "navbar.ftlh">
 
-        <div class="container col-lg-8 bg-white mt-3">
+        <div class="container col-lg-8 mt-3">
             <#nested>
         </div>
 

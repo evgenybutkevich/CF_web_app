@@ -7,6 +7,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Collection;
 import java.util.Date;
 import java.util.Set;
@@ -17,7 +19,7 @@ public class User implements UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
     @NotBlank(message = "Login cannot be empty!")
     @Length(max = 30, message = "Login too long! (more than 30 characters)")
@@ -59,11 +61,25 @@ public class User implements UserDetails {
         return roles.contains(Role.USER);
     }
 
+    public String getStringRegistrationDate() {
+        String stringDateFormat = "dd.MM.yyyy HH:mm:ss";
+        DateFormat dateFormat = new SimpleDateFormat(stringDateFormat);
+        String formattedDate = dateFormat.format(registrationDate);
+        return formattedDate;
+    }
+
+    public String getStringBirthDate() {
+        String stringDateFormat = "dd.MM.yyyy";
+        DateFormat dateFormat = new SimpleDateFormat(stringDateFormat);
+        String formattedDate = dateFormat.format(birthDate);
+        return formattedDate;
+    }
+
 //--id
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 

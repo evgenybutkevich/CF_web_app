@@ -24,7 +24,7 @@ public class Payment {
     private Double amount;
     private Date dateOfCreation;
 
-    public Integer getAuthorId() {
+    public Long getAuthorId() {
         return author.getId();
     }
 

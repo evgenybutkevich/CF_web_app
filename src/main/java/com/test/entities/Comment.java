@@ -31,7 +31,7 @@ public class Comment {
     private String filename;
     private Date dateOfCreation;
 
-    public Integer getAuthorId() {
+    public Long getAuthorId() {
         return author.getId();
     }
 

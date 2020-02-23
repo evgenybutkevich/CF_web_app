@@ -29,7 +29,7 @@
 
             <#if isAdmin>
                 <li class="nav-item">
-                    <a class="nav-link <#if titleName == 'Users'>active</#if>" href="/users">Users</a>
+                    <a class="nav-link <#if titleName == 'Users'>active</#if>" href="/users">ADMIN: Users</a>
                 </li>
             </#if>
         </ul>

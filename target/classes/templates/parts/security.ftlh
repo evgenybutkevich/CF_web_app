@@ -11,7 +11,7 @@
     >
 <#else>
     <#assign
-        name = "unknown"
+        name = "Unknown"
         isAdmin = false
         isUser = false
     >

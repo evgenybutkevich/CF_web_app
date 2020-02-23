@@ -38,7 +38,7 @@ public class Campaign {
     private Date dateOfExpiry;
     private String logo;
 
-    public Integer getAuthorId() {
+    public Long getAuthorId() {
         return author.getId();
     }
 

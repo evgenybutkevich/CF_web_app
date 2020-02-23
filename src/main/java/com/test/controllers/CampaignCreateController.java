@@ -68,7 +68,7 @@ public class CampaignCreateController {
             campaignRepository.save(campaign);
         }
 
-        return "redirect:/";
+        return "redirect:/campaigns";
     }
 
 }

@@ -1,5 +1,5 @@
 CREATE TABLE users (
-    id INTEGER NOT NULL AUTO_INCREMENT,
+    id BIGINT NOT NULL AUTO_INCREMENT,
 
     username VARCHAR(30) NOT NULL,
     password VARCHAR(255) NOT NULL,
@@ -21,7 +21,7 @@ CREATE TABLE users (
 );
 
 CREATE TABLE user_role (
-    user_id INTEGER NOT NULL,
+    user_id BIGINT NOT NULL,
 
     roles VARCHAR(10)
 );
@@ -29,7 +29,7 @@ CREATE TABLE user_role (
 CREATE TABLE campaigns(
     id INTEGER NOT NULL AUTO_INCREMENT,
 
-    user_id INTEGER NOT NULL,
+    user_id BIGINT NOT NULL,
     campaign_name VARCHAR(255),
 
     topic VARCHAR(50),
@@ -59,7 +59,7 @@ CREATE TABLE comments (
     id INTEGER NOT NULL AUTO_INCREMENT,
 
     campaign_id INTEGER NOT NULL,
-    user_id INTEGER NOT NULL,
+    user_id BIGINT NOT NULL,
 
     text VARCHAR(1024),
     filename VARCHAR(255),
@@ -72,7 +72,7 @@ CREATE TABLE payments (
     id INTEGER NOT NULL AUTO_INCREMENT,
 
     campaign_id INTEGER NOT NULL,
-    user_id INTEGER NOT NULL,
+    user_id BIGINT NOT NULL,
 
     amount DOUBLE PRECISION,
     date_of_creation DATETIME(6),

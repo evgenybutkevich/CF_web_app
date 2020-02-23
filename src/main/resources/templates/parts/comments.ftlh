@@ -5,12 +5,12 @@
         Add comment
     </a>
 
-    <div class="collapse <#if comment??>show</#if> mt-3" id="addComment">
+    <div class="collapse <#if comment??>show</#if> mt-1" id="addComment">
         <form method="post" enctype="multipart/form-data">
             <input name="_csrf" value="${_csrf.token}" type="hidden"/>
 
-            <div class="form-group row mb-1">
-                <div class="col-sm-6 pr-1">
+            <div class="form-group row">
+                <div class="col-6 mr-1 pr-0">
                     <input name="text" class="form-control ${(textError??)?string('is-invalid', '')}" type="text" value="<#if comment??>${comment.text}</#if>" placeholder="Comment">
 
                     <#if textError??>
@@ -20,10 +20,16 @@
                     </#if>
                 </div>
 
+            <div class="custom-file col-2 mr-1">
+                <input class="custom-file-input" name="avatar" type="file" id="file">
+                <label class="custom-file-label" for="file"></label>
+            </div>
+
                 <button class="btn btn-primary" type="submit">Send</button>
             </div>
 
-            <input name="file" class="form-control-file" type="file">
+
+
 
         </form>
     </div>

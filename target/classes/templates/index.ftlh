@@ -4,26 +4,22 @@
 
 <h1>Main page!</h1>
 
-<p>Click <a href="/users">here</a> to see users!</p>
-
-<div class="card-deck mt-5 p-2">
-    <button class="btn btn-outline-primary" type="button">PREV</button>
+<h4 class="mt-5">Last added campaigns!</h4>
+<div class="card-deck p-2">
 
     <#include "parts/card.ftlh">
     <#include "parts/card.ftlh">
     <#include "parts/card.ftlh">
 
-    <button class="btn btn-outline-primary" type="button">NEXT</button>
 </div>
 
-<div class="card-deck mt-5 mb-5 p-2">
-    <button class="btn btn-outline-primary" type="button">PREV</button>
+<h4 class="mt-5">Top rated campaigns!</h4>
+<div class="card-deck mb-5 p-2">
 
     <#include "parts/card.ftlh">
     <#include "parts/card.ftlh">
     <#include "parts/card.ftlh">
 
-    <button class="btn btn-outline-primary" type="button">NEXT</button>
 </div>
 
 </@m.main>

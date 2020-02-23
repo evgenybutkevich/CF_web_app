@@ -75,7 +75,10 @@
         <label class="col-form-label col-4 col-xl-2">Logo: </label>
 
         <div class="col-8 col-sm-8 col-xl-6">
-            <input class="form-control-file" name="logo" type="file">
+            <div class="custom-file">
+                <input class="custom-file-input" name="logo" type="file" id="file">
+                <label class="custom-file-label" for="file">Choose file</label>
+            </div>
         </div>
     </div>
 

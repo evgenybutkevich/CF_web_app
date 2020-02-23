@@ -5,8 +5,8 @@
 <#if campaign??>
     <h1>${campaign.campaignName}</h1>
     <h4>
-        (topic: <a href="/topics/${campaign.topic}">${campaign.topic}</a>,
-        author: <a href="/topics/${campaign.topic}">${campaign.authorName})</a>
+        (topic: ${campaign.topic},
+        author: <a href="/users/view/${campaign.authorId}">${campaign.authorName})</a>
     </h4>
 
     <div class="row">
@@ -87,5 +87,6 @@
 
     <p class="m-1"><b>No campaigns yet...</b></p>
 </#if>
+
 
 </@m.main>
